@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Manrope',sans-serif;
+}
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100vh;
+}
+
+/* Premium Background */
+
+body{
+
+    overflow-x:hidden;
+
+    color:white;
+
+    background:
+    radial-gradient(circle at top left,#1e3a8a 0%,transparent 28%),
+    radial-gradient(circle at top right,#4f46e5 0%,transparent 25%),
+    radial-gradient(circle at bottom left,#0f766e 0%,transparent 22%),
+    #050816;
+
+    background-attachment:fixed;
+}
+
+/* Smooth Scroll */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Selection */
+
+::selection{
+    background:#2563eb;
+    color:white;
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    box-shadow:
+    0 12px 40px rgba(0,0,0,.35);
+
+    transition:.35s ease;
+}
+
+.glass:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 50px rgba(37,99,235,.18);
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.primary-btn{
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 8px 25px rgba(59,130,246,.35);
+}
+
+.primary-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.primary-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+input,
+select,
+textarea{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    outline:none;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#3b82f6;
+
+    box-shadow:
+    0 0 0 3px rgba(59,130,246,.25);
+
+}
+
+/* Dropdown options */
+
+option{
+    color:black;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#60a5fa;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.fade-in{
+
+    animation:fadeIn .7s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.float{
+
+    transition:.35s ease;
+
+}
+
+.float:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1,h2,h3,h4{
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
