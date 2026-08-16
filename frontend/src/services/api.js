@@ -26,11 +26,8 @@ API.interceptors.request.use(
 API.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
-      window.location.href = "/"; // Redirect to login
-    }
+    console.log("API ERROR:", error.response?.status, error.config?.url);
+
     return Promise.reject(error);
   }
 );
