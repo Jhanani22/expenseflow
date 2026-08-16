@@ -1,8 +1,8 @@
 import axios from "axios";
- 
-// ─── Base instance ────────────────────────────────────────────────────────────
+
+// Base instance
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://expenseflow-6s85.onrender.com/api",
   headers: { "Content-Type": "application/json" },
 });
  
